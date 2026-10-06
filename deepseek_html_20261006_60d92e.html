@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Old Android — Всё для старых смартфонов</title>
+    <style type="text/css">
+        /* Простой CSS без современных свойств — для старых WebKit */
+        * { margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #222;
+            background: #f0f0f0;
+            line-height: 1.5;
+        }
+
+        /* ЦВЕТНОЙ ЗАГОЛОВОК — градиент */
+        .header {
+            background: #1e5799;
+            background: -webkit-gradient(linear, left top, left bottom,
+                from(#00c6ff), color-stop(0.5, #0072ff), to(#1e5799));
+            background: -webkit-linear-gradient(top, #00c6ff, #0072ff, #1e5799);
+            background: linear-gradient(to bottom, #00c6ff, #0072ff, #1e5799);
+            padding: 18px 12px;
+            color: #ffffff;
+            text-align: center;
+            border-bottom: 3px solid #003d80;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            text-shadow: 1px 1px 2px #003366;
+            margin-bottom: 4px;
+        }
+
+        .header .subtitle {
+            font-size: 12px;
+            color: #cce6ff;
+        }
+
+        /* Меню-навигация */
+        .nav {
+            background: #003d80;
+            padding: 0;
+        }
+
+        .nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-bottom: 1px solid #0055aa;
+            font-size: 13px;
+        }
+
+        .nav a:active {
+            background: #00c6ff;
+        }
+
+        /* Основной контент */
+        .content {
+            padding: 10px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 16px;
+            color: #0072ff;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #00c6ff;
+            padding-bottom: 4px;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: #1e5799;
+            margin: 10px 0 4px 0;
+        }
+
+        .card p {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .card ul {
+            margin: 6px 0 8px 20px;
+            font-size: 13px;
+        }
+
+        .card li {
+            margin-bottom: 4px;
+        }
+
+        /* Предупреждение про root */
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #663c00;
+        }
+
+        .danger {
+            background: #fdecea;
+            border-left: 4px solid #d32f2f;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #7f1d1d;
+        }
+
+        .ok {
+            background: #e8f5e9;
+            border-left: 4px solid #388e3c;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #1b5e20;
+        }
+
+        /* Кнопка */
+        .btn {
+            display: block;
+            text-align: center;
+            background: #0072ff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#00c6ff), to(#0072ff));
+            background: linear-gradient(to bottom, #00c6ff, #0072ff);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+            border: 1px solid #003d80;
+        }
+
+        .btn:active {
+            background: #003d80;
+        }
+
+        /* Таблица совместимости */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        table th {
+            background: #0072ff;
+            color: #fff;
+            padding: 6px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 6px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f7f7f7;
+        }
+
+        /* Футер */
+        .footer {
+            background: #1e5799;
+            color: #cce6ff;
+            text-align: center;
+            padding: 12px;
+            font-size: 11px;
+            margin-top: 15px;
+        }
+
+        .footer a {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ЦВЕТНОЙ ЗАГОЛОВОК -->
+    <div class="header">
+        <h1>📱 Old Android</h1>
+        <div class="subtitle">Всё для старых смартфонов и планшетов</div>
+    </div>
+
+    <!-- Навигация -->
+    <div class="nav">
+        <a href="#about">О старых Android</a>
+        <a href="#problems">Проблемы устройств</a>
+        <a href="#root">Root-права</a>
+        <a href="#table">Совместимость</a>
+    </div>
+
+    <div class="content">
+
+        <!-- О старых Android -->
+        <div class="card" id="about">
+            <h2>🕰 О старых Android</h2>
+            <p>Старые Android-смартфоны (версии 2.x Froyo, 2.3 Gingerbread,
+               3.x Honeycomb, 4.x Ice Cream Sandwich и Jelly Bean) до сих пор
+               используются миллионами людей по всему миру.</p>
+            <p>Основные причины:</p>
+            <ul>
+                <li>Устройство всё ещё работает</li>
+                <li>Нет денег на новое</li>
+                <li>Используется как резервный телефон</li>
+                <li>Ностальгия и коллекционирование</li>
+                <li>Специализированные задачи (радио, GPS-навигатор)</li>
+            </ul>
+        </div>
+
+        <!-- Проблемы старых устройств -->
+        <div class="card" id="problems">
+            <h2>⚠ Проблемы старых Android-устройств</h2>
+
+            <h3>1. Устаревшая ОС</h3>
+            <p>Android ниже 4.4 не поддерживает современные приложения.
+               Google Play Services больше не обновляется, многие приложения
+               не устанавливаются.</p>
+
+            <h3>2. Нет обновлений безопасности</h3>
+            <div class="danger">
+                🔴 <b>Опасно:</b> Android 2.x–4.x не получает патчи безопасности
+                с 2013–2016 годов. Устройство уязвимо для сотен известных
+                эксплойтов. Не используйте для банкинга и личных данных.
+            </div>
+
+            <h3>3. Мало оперативной памяти</h3>
+            <p>Обычно 256 МБ – 1 ГБ RAM. Современные приложения требуют
+               в разы больше. Система постоянно выгружает фоновые процессы.</p>
+
+            <h3>4. Устаревший WebView</h3>
+            <p>Встроенный браузер не поддерживает HTML5, CSS3, JavaScript ES6.
+               Многие сайты отображаются некорректно или не работают вообще.</p>
+
+            <h3>5. Проблемы с SSL/TLS</h3>
+            <div class="warning">
+                ⚠ Старые Android не поддерживают TLS 1.2/1.3 и современные
+                сертификаты. Большинство HTTPS-сайтов не открываются —
+                выдают ошибку сертификата.
+            </div>
+
+            <h3>6. Нет поддержки производителей</h3>
+            <p>Производители прекратили выпуск прошивок, драйверов и запчастей.
+               Найти оригинальную батарею или экран сложно.</p>
+
+            <h3>7. Проблемы с Google-сервисами</h3>
+            <ul>
+                <li>Play Market может не работать</li>
+                <li>Аккаунт Google не входит (устаревший протокол)</li>
+                <li>Gmail, YouTube, Maps не запускаются</li>
+            </ul>
+        </div>
+
+        <!-- Root-права -->
+        <div class="card" id="root">
+            <h2>🔓 Root-права на старых Android</h2>
+            <p>Root (суперпользователь) даёт полный доступ к системе.
+               На старых устройствах это часто <b>единственный способ</b>
+               продлить жизнь смартфону.</p>
+
+            <h3>Зачем нужен root на старом Android:</h3>
+            <ul>
+                <li>Удаление системного мусора (Google Apps, bloatware)</li>
+                <li>Установка новой прошивки (CyanogenMod, LineageOS)</li>
+                <li>Разгон или андервольтинг процессора</li>
+                <li>Установка AdAway (блокировка рекламы)</li>
+                <li>Расширение внутренней памяти (Link2SD, App2SD)</li>
+                <li>Резервное копирование (Titanium Backup)</li>
+                <li>Замена hosts и DNS</li>
+            </ul>
+
+            <h3>Способы получения root:</h3>
+            <ul>
+                <li><b>SuperOneClick</b> — для Android 2.x</li>
+                <li><b>z4root</b> — Android 2.1–2.3</li>
+                <li><b>Framaroot</b> — Android 4.x</li>
+                <li><b>KingoRoot / KingRoot</b> — Android 4.x–5.x</li>
+                <li><b>TowelRoot</b> — Android 4.4</li>
+                <li><b>Magisk</b> — только для Android 5.0+ (через кастомное рекавери)</li>
+            </ul>
+
+            <div class="warning">
+                ⚠ <b>Важно:</b> для большинства методов нужна разблокировка
+                загрузчика и кастомное рекавери (CWM, TWRP).
+                На некоторых устройствах загрузчик заблокирован навсегда.
+            </div>
+
+            <h3>Риски root-прав:</h3>
+            <div class="danger">
+                🔴 <b>Потеря гарантии</b> — даже если она ещё действует.<br/>
+                🔴 <b>Кирпич</b> — устройство может перестать включаться
+                при ошибке прошивки.<br/>
+                🔴 <b>Потеря данных</b> — разблокировка загрузчика стирает
+                всё содержимое.<br/>
+                🔴 <b>Уязвимости</b> — приложения с root-доступом могут
+                навредить системе.<br/>
+                🔴 <b>Безопасность</b> — банковские приложения и Google Pay
+                отказываются работать на root-устройствах.
+            </div>
+
+            <h3>Что делать после root:</h3>
+            <ul>
+                <li>Установить менеджер root-доступа (SuperSU, Magisk)</li>
+                <li>Сделать полный бэкап (TWRP backup)</li>
+                <li>Установить Titanium Backup для удаления системных приложений</li>
+                <li>Поставить AdAway, Link2SD, Greenify</li>
+                <li>Рассмотреть установку LineageOS для Android 4.x устройств</li>
+            </ul>
+
+            <div class="ok">
+                ✅ <b>Совет:</b> перед любыми действиями с root зарядите
+                устройство минимум до 70% и сделайте резервную копию
+                важных данных на SD-карту.
+            </div>
+
+            <a href="#top" class="btn">↑ Наверх</a>
+        </div>
+
+        <!-- Таблица совместимости -->
+        <div class="card" id="table">
+            <h2>📊 Совместимость методов root</h2>
+            <table>
+                <tr>
+                    <th>Android</th>
+                    <th>Метод</th>
+                    <th>Сложность</th>
+                </tr>
+                <tr>
+                    <td>2.1–2.3</td>
+                    <td>z4root</td>
+                    <td>Легко</td>
+                </tr>
+                <tr>
+                    <td>2.x</td>
+                    <td>SuperOneClick</td>
+                    <td>Легко</td>
+                </tr>
+                <tr>
+                    <td>4.0–4.2</td>
+                    <td>Framaroot</td>
+                    <td>Средне</td>
+                </tr>
+                <tr>
+                    <td>4.4</td>
+                    <td>TowelRoot</td>
+                    <td>Легко</td>
+                </tr>
+                <tr>
+                    <td>4.x–5.x</td>
+                    <td>KingoRoot</td>
+                    <td>Средне</td>
+                </tr>
+                <tr>
+                    <td>5.0+</td>
+                    <td>Magisk</td>
+                    <td>Сложно</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Футер -->
+    <div class="footer">
+        © 2025 Old Android Project<br/>
+        Сайт оптимизирован для старых смартфонов<br/>
+        Работает на Android 2.3+
+    </div>
+
+</body>
+</html>
